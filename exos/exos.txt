@@ -1,0 +1,17 @@
+1. Exo QuoteComponent
+Créer un composant "quote" qui affichera une citation et son auteur.
+Cet affichage se fera de façon aléatoire ou bien séquencielle 
+(le premier élément, puis le second, etc.), à intervale régulier (toutes les 10 secondes).
+La liste des citations sera embarquée dans le composant en tant que propriété de classe.
+
+Exemples de citation: 
+"La femme est l'avenir de l'homme" (Aragon)
+"The world is yours" (Toni Montana)
+"Ad astra per aspera" (Inconnu)
+
+Tip: setInterval
+
+
+2. Exo CodeGeneratorComponent
+Créer un composant affichant un bouton "Generate Code".
+Le clic sur ce bouton affichera un code numérique aléatoire (ex: 9631)

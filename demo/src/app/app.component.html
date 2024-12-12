@@ -1,0 +1,16 @@
+<h1>App.component.html</h1>
+<p>{{ title }}</p>
+<h3>{{ 2+2 }}</h3>
+
+<!-- property binding: []-->
+<p [class]="title">Année: {{ year + 1 }}</p>
+
+<!-- event binding: () -->
+<button (click)="onClick()">Click me</button>
+
+<!-- directives -->
+<p *ngIf="isOk">Je suis visible</p>
+<p *ngFor="let student of students">{{ student }}</p>
+
+<app-child></app-child>
+<exos-exo1></exos-exo1>
