@@ -5,6 +5,7 @@ import { ChildComponent } from './child/child.component';
 import { ExosModule } from './exos/exos.module';
 import { StudentsComponent } from './students/students.component';
 import { StudentListComponent } from './student-list/student-list.component';
+import { ChoiceComponent } from './choice/choice.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { StudentListComponent } from './student-list/student-list.component';
     ChildComponent, 
     ExosModule, 
     StudentsComponent,
-    StudentListComponent
+    StudentListComponent,
+    ChoiceComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
