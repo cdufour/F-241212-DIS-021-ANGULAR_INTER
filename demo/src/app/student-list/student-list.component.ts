@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../student.service';
 import { Student } from '../student';
 import { CommonModule } from '@angular/common';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-student-list',
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class StudentListComponent implements OnInit {
 
   //private studentService: StudentService | null = null;
-  students: any = [];
+  students: Student[] = [];
 
   constructor(private studentService: StudentService) {
     //this.studentService = new StudentService();
@@ -33,8 +34,12 @@ export class StudentListComponent implements OnInit {
       //   .then(res => res.json())
       //   .then(students => this.students = students)
 
-      this.studentService.getStudents()
-        .subscribe(students => this.students = students)
+      this.studentService
+        .getStudents()
+          .pipe(
+            tap(x => console.log(x[0]))
+          )
+          .subscribe(students => this.students = students)
   }
 
 }

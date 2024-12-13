@@ -15,3 +15,19 @@ Tip: setInterval
 2. Exo CodeGeneratorComponent
 Créer un composant affichant un bouton "Generate Code".
 Le clic sur ce bouton affichera un code numérique aléatoire (ex: 9631)
+
+
+3. Créer 1 composant city-choice proposant un menu déroulant listant
+des villes (ex: Turin, Rio, etc.)
+Lorsque l'utilisateur choisit une ville, devront apparaître dans le DOM:
+- 1 photo de la ville choisie
+- le nom de la ville
+- le nom du pays d'appartenance
+
+Veuillez utiliser un composant enfant pour l'affichage 
+des données (images + textes) de la ville.
+
+L'image peut provenir d'une source externe.
+Exemple: https://as2.ftcdn.net/v2/jpg/01/31/70/97/1000_F_131709727_jx36ilRvbLI3eBHCa2xjziFfvRzGzEeZ.jpg
+
+Option factultative: les données seront obtenues par un service
