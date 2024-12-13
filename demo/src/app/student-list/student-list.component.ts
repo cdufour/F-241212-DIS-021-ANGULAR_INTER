@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class StudentListComponent implements OnInit {
 
   //private studentService: StudentService | null = null;
-  students: Student[] = [];
+  students: any = [];
 
   constructor(private studentService: StudentService) {
     //this.studentService = new StudentService();
@@ -20,7 +20,21 @@ export class StudentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.students = this.studentService.getStudentsSync();
+    //this.students = this.studentService.getStudentsSync();
+    
+    /*
+    // approche "native", bas niveau
+    fetch('http://localhost:3000/students')
+      .then(res => res.json())
+      .then(students => this.students = students)
+    */
+
+      // this.studentService.getStudents()
+      //   .then(res => res.json())
+      //   .then(students => this.students = students)
+
+      this.studentService.getStudents()
+        .subscribe(students => this.students = students)
   }
 
 }
