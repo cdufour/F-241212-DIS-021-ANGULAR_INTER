@@ -1,0 +1,16 @@
+<h3>Students</h3>
+<p *ngFor="let student of students">
+    <span [ngStyle]="{'color': student.grade < 10 ? 'red' : 'black' }">
+        {{ student.name }}
+    </span>
+    <span [ngStyle]="objStyle">{{ student.grade }}</span>
+</p>
+<ol>
+    <li 
+        [ngClass]="{'winner': student.grade > 15, 'loser': student.grade < 10 }" 
+        *ngFor="let student of students"
+    >
+        {{ student.name }}
+    </li>
+</ol>
+<p [ngClass]="objClass">Simple paragraphe</p>

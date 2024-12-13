@@ -1,16 +1,29 @@
 <h1>App.component.html</h1>
-<p>{{ title }}</p>
-<h3>{{ 2+2 }}</h3>
 
-<!-- property binding: []-->
-<p [class]="title">Année: {{ year + 1 }}</p>
+<div *ngIf="false">
+    <p>{{ title }}</p>
+    <h3>{{ 2+2 }}</h3>
 
-<!-- event binding: () -->
-<button (click)="onClick()">Click me</button>
+    <!-- property binding: []-->
+    <p [class]="title">Année: {{ year + 1 }}</p>
 
-<!-- directives -->
-<p *ngIf="isOk">Je suis visible</p>
-<p *ngFor="let student of students">{{ student }}</p>
+    <!-- event binding: () -->
+    <button (click)="onClick()">Click me</button>
 
-<app-child></app-child>
-<exos-exo1></exos-exo1>
+    <!-- directives -->
+    <p *ngIf="isOk">Je suis visible</p>
+    <p *ngFor="let student of students">{{ student }}</p>
+
+    <app-child></app-child>
+    <exos-exo1></exos-exo1>
+    <exos-code-generator></exos-code-generator>
+    <exos-quote [speed]="1000"></exos-quote>
+    <app-students></app-students>
+</div>
+
+<app-student-list></app-student-list>
+
+
+
+
+
