@@ -1,19 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../student.service';
+import { Student } from '../student';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-student-list',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.css'
 })
-export class StudentListComponent {
+export class StudentListComponent implements OnInit {
 
-  studentService: StudentService | null = null;
+  //private studentService: StudentService | null = null;
+  students: Student[] = [];
 
-  constructor() {
-    this.studentService = new StudentService();
-    console.log(this.studentService.example);
+  constructor(private studentService: StudentService) {
+    //this.studentService = new StudentService();
+    //console.log(this.studentService.example);
+  }
+
+  ngOnInit(): void {
+    this.students = this.studentService.getStudentsSync();
   }
 
 }
