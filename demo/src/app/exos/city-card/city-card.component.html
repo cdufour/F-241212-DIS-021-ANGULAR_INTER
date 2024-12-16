@@ -1,0 +1,10 @@
+<div *ngIf="selectedCity">
+    <p>Pays: {{ selectedCity.country }} </p>
+    <div>
+        <img 
+            [src]="'assets/images/cities/' + selectedCity.image" 
+            width="400" 
+            [alt]="selectedCity.name" 
+        />
+    </div>
+</div>

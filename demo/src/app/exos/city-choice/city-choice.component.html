@@ -1,0 +1,19 @@
+
+<select (change)="onChange($event)">
+    <option *ngFor="let city of cities; ">
+        {{ city.name }}
+    </option>
+</select>
+
+<p>{{ selectedCity?.name }}</p>
+
+<!-- v1: city-choice responsable du template de la ville -->
+<div *ngIf="selectedCity">
+    <p>Pays: {{ selectedCity.country }} </p>
+    <div>
+        <img [src]="'assets/images/cities/' + selectedCity.image" width="400" [alt]="selectedCity.name" />
+    </div>
+</div>
+
+<!-- v2: utilisation d'un composant enfant-->
+ <exos-city-card [selectedCity]="selectedCity"></exos-city-card>
