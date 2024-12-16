@@ -30,4 +30,4 @@ des données (images + textes) de la ville.
 L'image peut provenir d'une source externe.
 Exemple: https://as2.ftcdn.net/v2/jpg/01/31/70/97/1000_F_131709727_jx36ilRvbLI3eBHCa2xjziFfvRzGzEeZ.jpg
 
-Option factultative: les données seront obtenues par un service
+Option facultative: les données seront obtenues par un service
