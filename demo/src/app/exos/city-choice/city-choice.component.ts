@@ -12,6 +12,7 @@ export class CityChoiceComponent implements OnInit {
 
   cities: City[] = [];
   selectedCity: City | undefined = undefined;
+  today: number = Date.now();
 
   constructor(@Inject(CityService) private cityService: CityService) {}
 

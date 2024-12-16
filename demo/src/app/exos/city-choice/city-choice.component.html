@@ -1,3 +1,4 @@
+<p>{{ today | date:'h:mm:ss' }}</p>
 
 <select (change)="onChange($event)">
     <option *ngFor="let city of cities; ">
@@ -5,7 +6,7 @@
     </option>
 </select>
 
-<p>{{ selectedCity?.name }}</p>
+<p>{{ selectedCity?.name | uppercase }}</p>
 
 <!-- v1: city-choice responsable du template de la ville -->
 <div *ngIf="selectedCity">
