@@ -31,3 +31,19 @@ L'image peut provenir d'une source externe.
 Exemple: https://as2.ftcdn.net/v2/jpg/01/31/70/97/1000_F_131709727_jx36ilRvbLI3eBHCa2xjziFfvRzGzEeZ.jpg
 
 Option facultative: les données seront obtenues par un service
+
+4. Créer une application angular à 3 composants
+- 1 composant racine avec deux composants enfants chargés en même temps (pas besoin de routage)
+    - composant ClientForm
+    - composant ClientList
+
+ClientForm:
+Permettra d'enregistrer un client (nom, ville, code postal)
+
+ClientList:
+Affichera la liste des cliens enregistrés (uniquement le nom)
+
+Options facultatives: 
+Interdire les noms en double.
+Contraintes de validation sur le formulaires (champs requis, code postal, etc.)
+Enregistrement sur localStorage

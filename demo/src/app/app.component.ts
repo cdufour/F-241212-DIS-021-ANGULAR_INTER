@@ -6,6 +6,9 @@ import { ExosModule } from './exos/exos.module';
 import { StudentsComponent } from './students/students.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { ChoiceComponent } from './choice/choice.component';
+import { StudentFormComponent } from './student-form/student-form.component';
+import { SwitchExampleComponent } from './switch-example/switch-example.component';
+import { CustomCardComponent } from './custom-card/custom-card.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +19,10 @@ import { ChoiceComponent } from './choice/choice.component';
     ExosModule, 
     StudentsComponent,
     StudentListComponent,
-    ChoiceComponent
+    ChoiceComponent,
+    StudentFormComponent,
+    SwitchExampleComponent,
+    CustomCardComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

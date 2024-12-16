@@ -1,0 +1,29 @@
+<h3>Student Form</h3>
+
+<form #form="ngForm">
+    <input 
+        #name="ngModel" 
+        type="text"
+        required
+        minlength="4"
+        [(ngModel)]="student.name"
+        name="name"
+        placeholder="Name"
+    />
+    
+    <input 
+        type="number"
+        required
+        [(ngModel)]="student.grade"
+        name="grade"
+        placeholder="Grade"
+    />
+
+    <button [disabled]="form.invalid">Submit</button>
+</form>
+
+<section>
+    <p>{{ student | json }}</p>
+    <p>Is Student Name valid ? => {{ name.valid }}</p>
+    <p>Is Form valid ? => {{ form.valid }}</p>
+</section>
