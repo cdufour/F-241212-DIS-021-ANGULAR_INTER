@@ -1,0 +1,14 @@
+<h2>Ajouter un client</h2>
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+    <label class="form-label">Nom:</label>
+    <input class="form-control" type="text" formControlName="name">
+
+    <label class="form-label">Ville:</label>
+    <input class="form-control" type="text" formControlName="city">
+
+    <label class="form-label">Code postal:</label>
+    <input class="form-control" type="text" formControlName="postcode">
+
+    <button class="btn btn-primary" type="submit" [disabled]="clientForm.invalid">Enregistrer</button>
+</form>
+

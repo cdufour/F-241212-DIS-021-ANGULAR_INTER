@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <app-client-form (onSave)="onSave($event)"></app-client-form>
+    </div>
+    <div class="col-6">
+      <app-client-list [clients]="clients"></app-client-list>
+    </div>
+  </div>
+</div>
